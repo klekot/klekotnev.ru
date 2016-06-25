@@ -1,0 +1,2 @@
+module LiteratureHelper
+end

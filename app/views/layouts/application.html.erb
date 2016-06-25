@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Полное собрание сочинений Игоря Клекотнева</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="http://bootstrap-3.ru/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="main-menu">
+        <div class="inner">
+          <% site_header = "<h1 class=\"cover-heading\">Полное Собрание Сочинений Игоря Клекотнева</h1>" %>
+          <%= link_to site_header.html_safe, welcome_index_path, class: 'main-title' %>
+          <ul class="nav masthead-nav">
+            <li><%= link_to 'Программирование',  programming_index_path %></li>
+            <li><%= link_to 'Музыка',  music_index_path %></li>
+            <li><%= link_to 'Литература',  literature_index_path %></li>
+            <li><%= link_to 'Нигдея',  nowhereland_index_path %></li>
+            <li><%= link_to 'Контакты',  contacts_index_path %></li>
+            <li><%= link_to '<span class="glyphicon glyphicon-search"></span>'.html_safe,  "#" %></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="inner cover">
+          <%= yield %>
+        </div>
+      </div>
+
+      <!-- Site footer -->
+      <div class="footer mastfoot">
+        <%= render 'shared/footer' %>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="http://bootstrap-3.ru/assets/js/docs.min.js"></script>
+
+  </body>
+</html>

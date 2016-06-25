@@ -1,0 +1,5 @@
+<ul class="nav nav-pills nav-stacked">
+<% locals[:sub_sections].sort.each do |sub| %>
+  <li><%= link_to sub.title, action: sub.name %></li>
+<% end %>
+</ul>

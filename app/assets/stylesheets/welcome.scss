@@ -1,0 +1,31 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-title {
+  font-family: 'Yeseva One', cursive;
+}
+
+.main-igor {
+  margin-top: -30px;
+  text-align: center;
+  img {
+    border-radius: 10%;
+    max-height: 300px;
+    margin: 50px;
+  }
+}
+
+.cite-container {
+  content-align: center;
+}
+
+.cite {
+  margin: 0 auto;
+  ul {
+    list-style-type: none;
+  }
+  max-width: 400px;
+  font-family: 'Marck Script', cursive;
+  font-size: 20px;
+}
